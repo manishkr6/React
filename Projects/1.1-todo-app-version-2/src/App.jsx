@@ -1,6 +1,5 @@
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
-import TodoItem2 from "./components/TodoItem2";
 import TodoItem from "./components/TodoItem";
 
 import "./Apps.css";
@@ -12,7 +11,7 @@ function App() {
       <AddTodo />
       <div className="items-container">
         <TodoItem todoDate="23/11/2024" todoName="Paneer"/>
-        <TodoItem2 />
+        <TodoItem todoDate="12/02/2024" todoName="Go to College"/>
       </div>
     </center>
   );
