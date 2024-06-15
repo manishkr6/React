@@ -1,0 +1,9 @@
+button {
+  background-color: rgb(26, 26, 42) !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 5000px;
+}
+* {
+  background-color: black;
+}
