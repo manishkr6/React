@@ -2,8 +2,6 @@ import { useRef } from "react";
 import { IoMdAdd } from "react-icons/io";
 
 function AddTodo({ onNewItem }) {
-  const [todoName, setTodoName] = useState("");
-  const [dueDate, setdueDate] = useState("");
   const todoNameElement = useRef();
   const dueDateElement = useRef();
 
