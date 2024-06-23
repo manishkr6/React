@@ -2,33 +2,30 @@ import { useContext, useRef } from "react";
 import { PostList } from "../store/post-list-store";
 
 const CreatePost = () => {
-  const {addPost} = useContext(PostList)
+  const { addPost } = useContext(PostList);
 
-  const userIdElement = useRef()
-  const postTitleElement = useRef()
-  const postBodyElement = useRef()
-  const reactionsElement = useRef()
-  const tagsElement = useRef()
+  const userIdElement = useRef();
+  const postTitleElement = useRef();
+  const postBodyElement = useRef();
+  const reactionsElement = useRef();
+  const tagsElement = useRef();
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    const userId = userIdElement.current.value
-    const postTitle = postTitleElement.current.value
-    const postBody = postBodyElement.current.value
-    const reactions = reactionsElement.current.value
-    const tags = tagsElement.current.value.split(
-    " "
-    )
+    event.preventDefault();
+    const userId = userIdElement.current.value;
+    const postTitle = postTitleElement.current.value;
+    const postBody = postBodyElement.current.value;
+    const reactions = reactionsElement.current.value;
+    const tags = tagsElement.current.value.split(" ");
 
-    userIdElement.current.value = ""
-    postTitleElement.current.value = ""
-    postBodyElement.current.value = ""
-    reactionsElement.current.value = ""
-    tagsElement.current.value = ""
+    userIdElement.current.value = "";
+    postTitleElement.current.value = "";
+    postBodyElement.current.value = "";
+    reactionsElement.current.value = "";
+    tagsElement.current.value = "";
 
-    addPost(userId, postTitle, postBody, reactions, tags)
-  }
-
+    addPost(userId, postTitle, postBody, reactions, tags);
+  };
 
   return (
     <>
@@ -107,6 +104,5 @@ const CreatePost = () => {
 };
 
 export default CreatePost;
-
 
 // 11:21
