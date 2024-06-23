@@ -13,24 +13,26 @@ function App() {
 
   return (
     <PostListProvider>
-    <div className="app-container">
-      <Sidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></Sidebar>
-      <div className="content">
-        <Header></Header>
-        {selectedTab === "Home" ? (
-          <PostList></PostList>
-        ) : (
-          <CreatePost></CreatePost>
-        )}
+      <div className="app-container">
+        <Sidebar
+          selectedTab={selectedTab}
+          setSelectedTab={setSelectedTab}
+        ></Sidebar>
+        <div className="content">
+          <Header></Header>
+          {selectedTab === "Home" ? (
+            <PostList></PostList>
+          ) : (
+            <CreatePost></CreatePost>
+          )}
 
-        <Footer></Footer>
+          <Footer></Footer>
+        </div>
       </div>
-    </div>
     </PostListProvider>
   );
 }
 
 export default App;
-
 
 // 10 : 46
